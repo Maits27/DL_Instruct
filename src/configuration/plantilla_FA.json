@@ -1,0 +1,69 @@
+{
+  "train_path": "FA_PATH/CARPETA_NOMBRE/VAR_STEP.csv",
+  "output_dir": "MI_PATH/evaluador/src/outputFA/CARPETA_NOMBRE/MODEL_ID_NAME/output_pAC_PROMPT",
+  "model": "MODEL_ID",
+  "prompt": "AC_PROMPT",
+  "prompts": {
+    "en": {
+      "Q": "CLINICAL CASE",
+      "1": "You are a cardiologist reviewing atrial fibrillation reports. Your task is to determine whether the patient mentioned in the current report has relapsed or not. Your response should be either 1 or 0 (1 if they have relapsed, 0 otherwise).",
+      "2": "You are a cardiologist reviewing reports on atrial fibrillation. Your task is to determine whether the patient in the current report has experienced a relapse. Please respond with either 1 if the patient has relapsed or 0 if they have not.",
+      "3": "You are a cardiologist reviewing reports on atrial fibrillation. Your task is to determine whether the patient in the current report has experienced a relapse. Follow these steps to ensure accuracy:\n\n1. Read the Report Thoroughly: Carefully read the entire report to gather all relevant information about the patient's condition and history.\n2. Identify Relapse Indicators: Look for specific indicators or symptoms mentioned in the report that signify a relapse of atrial fibrillation, such as irregular heartbeats, palpitations, shortness of breath, or chest pain.\n3. Consider the Medical History: Take into account the patient's medical history, including any previous episodes of atrial fibrillation, treatments received, and their outcomes.\n4. Make a Decision: Based on the gathered information, decide whether the patient has relapsed.\n\nRespond with:\n- 1 if the patient has relapsed.\n- 0 if the patient has not relapsed."
+    },
+    "es": {
+      "Q": "CASO CLÍNICO",
+      "1": "Eres un cardiólogo revisando informes de fibrilación auricular. Tu tarea es determinar si el paciente mencionado en el informe actual ha recaído o no. Tu respuesta debe ser 1 o 0 (1 si ha recaído, 0 en caso contrario).",
+      "2": "Eres un cardiólogo revisando informes de fibrilación auricular. Tu tarea es determinar si el paciente en el informe actual ha experimentado una recaída. Por favor, responde con 1 si el paciente ha recaído o con 0 si no ha recaído.",
+      "3": "Eres un cardiólogo revisando informes de fibrilación auricular. Tu tarea es determinar si el paciente en el informe actual ha experimentado una recaída. Sigue estos pasos para asegurar la precisión:\n\n1. Lee el Informe Detenidamente: Lee cuidadosamente todo el informe para reunir toda la información relevante sobre la condición y el historial del paciente.\n2. Identifica Indicadores de Recaída: Busca indicadores específicos o síntomas mencionados en el informe que signifiquen una recaída de la fibrilación auricular, como latidos irregulares, palpitaciones, dificultad para respirar o dolor en el pecho.\n3. Considera el Historial Médico: Ten en cuenta el historial médico del paciente, incluyendo cualquier episodio previo de fibrilación auricular, tratamientos recibidos y sus resultados.\n4. Toma una Decisión: Basado en la información recopilada, decide si el paciente ha recaído.\n\nResponde con:\n- 1 si el paciente ha recaído.\n- 0 si el paciente no ha recaído."
+    }
+  },
+  "messages": {
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": [
+                    {"role": "system", "content": ""},
+                    {"role": "user", "content":
+                            "<Q>:<ID>\n<PATIENT_CASE>"}
+                ],
+    "meta-llama/Llama-3.3-70B-Instruct": [
+                    {"role": "system", "content": ""},
+                    {"role": "user", "content":
+                            "<Q>:<ID>\n<PATIENT_CASE>"}
+                ],
+    "google/gemma-2-9b-it": [
+                    {"role": "user", "content":
+                            "<Q>:<ID>\n<PATIENT_CASE>"}
+                ],
+    "mistralai/Mistral-7B-Instruct-v0.3": [
+                    {"role": "system", "content": ""},
+                    {"role": "user", "content":
+                            "<Q>:<ID>\n<PATIENT_CASE>"}
+                ],
+    "meta-llama/Llama-3.1-8B": [
+                    {"role": "system", "content": ""},
+                    {"role": "user", "content":
+                            "<Q>:<ID>\n<PATIENT_CASE>"}
+                ],
+    "meta-llama/Llama-3.1-70B": [
+                    {"role": "system", "content": ""},
+                    {"role": "user", "content":
+                            "<Q>:<ID>\n<PATIENT_CASE>"}
+                ],
+    "google/gemma-2-9b": [
+                    {"role": "user", "content":
+                            "<Q>:<ID>\n<PATIENT_CASE>"}
+                ],
+    "mistralai/Mistral-7B-v0.3": [
+                    {"role": "system", "content": ""},
+                    {"role": "user", "content":
+                            "<Q>:<ID>\n<PATIENT_CASE>"}
+                ]
+  },
+  "params": {
+    "temperature": 0,
+    "max_new_tokens": 2
+  },
+  "prompt_solo_en": PROMPT_SOLO_ENG,
+  "language": "VAR_LANG",
+  "document_partition": "dev",
+  "tarea": "FA",
+  "batch_size": 16
+}

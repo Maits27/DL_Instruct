@@ -1,0 +1,71 @@
+{
+  "train_path": "MI_PATH/evaluador/data/mcqa/CARPETA_NOMBRE/VAR_STEP.jsonl",
+  "output_dir": "MI_PATH/evaluador/src/outputMCQA/CARPETA_NOMBRE/MODEL_ID_NAME/output_pAC_PROMPT",
+  "model": "MODEL_ID",
+  "prompt": "AC_PROMPT",
+  "prompts": {
+    "en": {
+      "Q": "QUESTION",
+      "QT": "QUESTION TYPE",
+      "C": "QUESTION",
+      "ANS": "CORRECT ANSWER",
+      "1": "You're a final-year medical student taking a medical exam. Use your extensive medical knowledge and reasoning skills to determine the correct answer to the multiple-choice question below. Provide your answer as a single number (1, 2, 3, or 4), corresponding to the correct option.",
+      "2": "You're a final-year medical student taking a medical exam. You will be presented with multiple-choice questions from an official medical exam, which is designed for final-year medical students. Your goal is to select the correct answer from the five provided options by applying your extensive medical knowledge and critical thinking abilities. Follow these guidelines:\n\t1. Read the question carefully: Ensure you understand all aspects of the question, including any clinical scenarios, symptoms, and conditions described.\n\t2. Consider each answer option: Evaluate each of the five answer choices critically, considering their relevance to the question based on medical facts and principles.\n\t3. Use logical reasoning: Apply your medical knowledge to eliminate incorrect answers and narrow down the options.\n\t4. Select the best answer: Choose the answer that most accurately and comprehensively addresses the question.\nIMPORTANT: Provide your answer as a single number (1, 2, 3, or 4) that corresponds to the correct answer."
+  }},
+  "messages": {
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": [
+                    {"role": "system", "content": ""},
+                    {"role": "user", "content":
+                            "<Q>:<ID>\n<QT>: <SUBJ_NAME> <TOPIC_NAME>\n<C>:\n<FULL_QUESTION>\n1.- <O1>\n2.- <O2>\n3.- <O3>\n4.- <O4>\n"},
+                    {"role": "assistant", "content": "<ANS>: "}
+                ],
+    "meta-llama/Llama-3.3-70B-Instruct": [
+                    {"role": "system", "content": ""},
+                    {"role": "user", "content":
+                            "<Q>:<ID>\n<QT>: <SUBJ_NAME> <TOPIC_NAME>\n<C>:\n<FULL_QUESTION>\n1.- <O1>\n2.- <O2>\n3.- <O3>\n4.- <O4>\n"},
+                    {"role": "assistant", "content": "<ANS>: "}
+                ],
+    "google/gemma-2-9b-it": [
+                    {"role": "user", "content":
+                            "\n\n<Q>:<ID>\n<QT>: <SUBJ_NAME> <TOPIC_NAME>\n<C>:\n<FULL_QUESTION>\n1.- <O1>\n2.- <O2>\n3.- <O3>\n4.- <O4>\n"},
+                    {"role": "assistant", "content": "<ANS>: "}
+                ],
+    "mistralai/Mistral-7B-Instruct-v0.3": [
+                    {"role": "system", "content": ""},
+                    {"role": "user", "content":
+                            "<Q>:<ID>\n<QT>: <SUBJ_NAME> <TOPIC_NAME>\n<C>:\n<FULL_QUESTION>\n1.- <O1>\n2.- <O2>\n3.- <O3>\n4.- <O4>\n"},
+                    {"role": "assistant", "content": "<ANS>: "}
+                ],
+    "meta-llama/Llama-3.1-70B": [
+                    {"role": "system", "content": ""},
+                    {"role": "user", "content":
+                            "<Q>:<ID>\n<QT>: <SUBJ_NAME> <TOPIC_NAME>\n<C>:\n<FULL_QUESTION>\n1.- <O1>\n2.- <O2>\n3.- <O3>\n4.- <O4>\n"},
+                    {"role": "assistant", "content": "<ANS>: "}
+                ],
+    "meta-llama/Llama-3.1-8B": [
+                    {"role": "system", "content": ""},
+                    {"role": "user", "content":
+                            "<Q>:<ID>\n<QT>: <SUBJ_NAME> <TOPIC_NAME>\n<C>:\n<FULL_QUESTION>\n1.- <O1>\n2.- <O2>\n3.- <O3>\n4.- <O4>\n"},
+                    {"role": "assistant", "content": "<ANS>: "}
+                ],
+    "google/gemma-2-9b": [
+                    {"role": "user", "content":
+                            "\n\n<Q>:<ID>\n<QT>: <SUBJ_NAME> <TOPIC_NAME>\n<C>:\n<FULL_QUESTION>\n1.- <O1>\n2.- <O2>\n3.- <O3>\n4.- <O4>\n"},
+                    {"role": "assistant", "content": "<ANS>: "}
+                ],
+    "mistralai/Mistral-7B-v0.3": [
+                    {"role": "system", "content": ""},
+                    {"role": "user", "content":
+                            "<Q>:<ID>\n<QT>: <SUBJ_NAME> <TOPIC_NAME>\n<C>:\n<FULL_QUESTION>\n1.- <O1>\n2.- <O2>\n3.- <O3>\n4.- <O4>\n"},
+                    {"role": "assistant", "content": "<ANS>: "}
+                ]
+  },
+  "params": {
+    "temperature": 0,
+    "max_new_tokens": 2
+  },
+  "prompt_solo_en": false,
+  "language": "VAR_LANG",
+  "document_partition": "VAR_STEP",
+  "tarea": "MCQA"
+}

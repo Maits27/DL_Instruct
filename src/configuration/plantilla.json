@@ -1,0 +1,92 @@
+{
+  "train_path": "MI_PATH/evaluador/data/casimedicos/CARPETA_NOMBRE/VAR_LANG_VAR_STEP_casimedicos.jsonl",
+  "output_dir": "MI_PATH/evaluador/src/outputQA/CARPETA_NOMBRE/MODEL_ID_NAME/output_pAC_PROMPT",
+  "model": "MODEL_ID",
+  "prompt": "AC_PROMPT",
+  "prompts": {
+    "en": {
+      "Q": "QUESTION",
+      "QT": "QUESTION TYPE",
+      "C": "CLINICAL CASE",
+      "ANS": "CORRECT ANSWER",
+      "1": "You're a final-year medical student taking the official MIR medical exam. Answer the multiple-choice exam question presented to you, using all your medical knowledge. Your answer must be a number from 1 to 5 referring to the correct answer's number.",
+      "2": "You're a final-year medical student taking the official MIR medical exam. Use your extensive medical knowledge and reasoning skills to determine the correct answer to the multiple-choice question below. Provide your answer as a single number (1, 2, 3, 4, or 5), corresponding to the correct option.",
+      "3": "You are an advanced AI trained to assist in answering medical exam questions. You will be presented with multiple-choice questions from the official MIR medical exam, which is designed for final-year medical students. Your goal is to select the correct answer from the five provided options by applying your extensive medical knowledge and critical thinking abilities. Follow these guidelines:\n\t1. Read the question carefully: Ensure you understand all aspects of the question, including any clinical scenarios, symptoms, and conditions described.\n\t2. Consider each answer option: Evaluate each of the five answer choices critically, considering their relevance to the question based on medical facts and principles.\n\t3. Use logical reasoning: Apply your medical knowledge to eliminate incorrect answers and narrow down the options.\n\t4. Select the best answer: Choose the answer that most accurately and comprehensively addresses the question.\nIMPORTANT: Provide your answer as a single number (1, 2, 3, 4, or 5) that corresponds to the correct answer.",
+      "4": "You're a final-year medical student taking the official MIR medical exam. You will be presented with multiple-choice questions from the official MIR medical exam, which is designed for final-year medical students. Your goal is to select the correct answer from the five provided options by applying your extensive medical knowledge and critical thinking abilities. Follow these guidelines:\n\t1. Read the question carefully: Ensure you understand all aspects of the question, including any clinical scenarios, symptoms, and conditions described.\n\t2. Consider each answer option: Evaluate each of the five answer choices critically, considering their relevance to the question based on medical facts and principles.\n\t3. Use logical reasoning: Apply your medical knowledge to eliminate incorrect answers and narrow down the options.\n\t4. Select the best answer: Choose the answer that most accurately and comprehensively addresses the question.\nIMPORTANT: Provide your answer as a single number (1, 2, 3, 4, or 5) that corresponds to the correct answer."
+  },
+    "es": {
+      "Q": "PREGUNTA",
+      "QT": "TIPO DE PREGUNTA",
+      "C": "CASO CLÍNICO",
+      "ANS": "RESPUESTA CORRECTA",
+      "1": "Eres un estudiante de medicina de último año tomando el examen oficial MIR. Responde a la pregunta de opción múltiple que se te presenta, usando todo tu conocimiento médico. Tu respuesta debe ser un número del 1 al 5 que se refiere al número de la respuesta correcta.",
+      "2": "Eres un estudiante de medicina de último año tomando el examen oficial MIR. Usa tus amplios conocimientos médicos y habilidades de razonamiento para determinar la respuesta correcta a la pregunta de opción múltiple a continuación. Proporciona tu respuesta como un solo número (1, 2, 3, 4 o 5), correspondiente a la opción correcta.",
+      "3": "Eres una IA avanzada entrenada para ayudar a responder preguntas de exámenes médicos. Se te presentarán preguntas de opción múltiple del examen oficial MIR, diseñado para estudiantes de medicina de último año. Tu objetivo es seleccionar la respuesta correcta de las cinco opciones proporcionadas aplicando tus amplios conocimientos médicos y habilidades de pensamiento crítico. Sigue estas pautas:\n\t1. Lee la pregunta con atención: Asegúrate de entender todos los aspectos de la pregunta, incluidos los escenarios clínicos, síntomas y condiciones descritas.\n\t2. Considera cada opción de respuesta: Evalúa críticamente cada una de las cinco opciones de respuesta, considerando su relevancia para la pregunta basada en hechos y principios médicos.\n\t3. Usa el razonamiento lógico: Aplica tu conocimiento médico para eliminar las respuestas incorrectas y reducir las opciones. \n\t4. Selecciona la mejor respuesta: Elige la respuesta que más precisa y completamente aborda la pregunta. \nIMPORTANTE: Proporciona tu respuesta como un solo número (1, 2, 3, 4 o 5) que corresponda a la respuesta correcta.",
+      "4": "Eres un estudiante de medicina de último año tomando el examen oficial MIR. Se te presentarán preguntas de opción múltiple del examen oficial MIR, diseñado para estudiantes de medicina de último año. Tu objetivo es seleccionar la respuesta correcta de las cinco opciones proporcionadas aplicando tus amplios conocimientos médicos y habilidades de pensamiento crítico. Sigue estas pautas:\n\t1. Lee la pregunta con atención: Asegúrate de entender todos los aspectos de la pregunta, incluidos los escenarios clínicos, síntomas y condiciones descritas.\n\t2. Considera cada opción de respuesta: Evalúa críticamente cada una de las cinco opciones de respuesta, considerando su relevancia para la pregunta basada en hechos y principios médicos.\n\t3. Usa el razonamiento lógico: Aplica tu conocimiento médico para eliminar las respuestas incorrectas y reducir las opciones. \n\t4. Selecciona la mejor respuesta: Elige la respuesta que más precisa y completamente aborda la pregunta. \nIMPORTANTE: Proporciona tu respuesta como un solo número (1, 2, 3, 4 o 5) que corresponda a la respuesta correcta."
+    }
+  },
+  "messages": {
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": [
+                    {"role": "system", "content": ""},
+                    {"role": "user", "content":
+                            "<Q>:<ID>_<ID_SPECIFIC>\n<QT>: <TYPE>\n<C>:\n<FULL_QUESTION>\n1.- <O1>\n2.- <O2>\n3.- <O3>\n4.- <O4>\n5.- <O5>\n"},
+                    {"role": "assistant", "content": "<ANS>: "}
+                ],
+    "meta-llama/Llama-3.3-70B-Instruct": [
+                    {"role": "system", "content": ""},
+                    {"role": "user", "content":
+                            "<Q>:<ID>_<ID_SPECIFIC>\n<QT>: <TYPE>\n<C>:\n<FULL_QUESTION>\n1.- <O1>\n2.- <O2>\n3.- <O3>\n4.- <O4>\n5.- <O5>\n"},
+                    {"role": "assistant", "content": "<ANS>: "}
+                ],
+    "google/gemma-2-2b-it": [
+                    {"role": "user", "content":
+                            "\n\n<Q>:<ID>_<ID_SPECIFIC>\n<QT>: <TYPE>\n<C>:\n<FULL_QUESTION>\n1.- <O1>\n2.- <O2>\n3.- <O3>\n4.- <O4>\n5.- <O5>\n"},
+                    {"role": "assistant", "content": "<ANS>: "}
+                ],
+    "google/gemma-2-9b-it": [
+                    {"role": "user", "content":
+                            "\n\n<Q>:<ID>_<ID_SPECIFIC>\n<QT>: <TYPE>\n<C>:\n<FULL_QUESTION>\n1.- <O1>\n2.- <O2>\n3.- <O3>\n4.- <O4>\n5.- <O5>\n"},
+                    {"role": "assistant", "content": "<ANS>: "}
+                ],
+    "mistralai/Mistral-7B-Instruct-v0.3": [
+                    {"role": "system", "content": ""},
+                    {"role": "user", "content":
+                            "<Q>:<ID>_<ID_SPECIFIC>\n<QT>: <TYPE>\n<C>:\n<FULL_QUESTION>\n1.- <O1>\n2.- <O2>\n3.- <O3>\n4.- <O4>\n5.- <O5>\n"},
+                    {"role": "assistant", "content": "<ANS>: "}
+                ],
+    "meta-llama/Llama-3.1-8B": [
+                    {"role": "user", "content":
+                            "<Q>:<ID>_<ID_SPECIFIC>\n<QT>: <TYPE>\n<C>:\n<FULL_QUESTION>\n1.- <O1>\n2.- <O2>\n3.- <O3>\n4.- <O4>\n5.- <O5>\n"},
+                    {"role": "assistant", "content": "<ANS>: "}
+                ],
+    "meta-llama/Llama-3.1-70B": [
+                    {"role": "user", "content":
+                            "<Q>:<ID>_<ID_SPECIFIC>\n<QT>: <TYPE>\n<C>:\n<FULL_QUESTION>\n1.- <O1>\n2.- <O2>\n3.- <O3>\n4.- <O4>\n5.- <O5>\n"},
+                    {"role": "assistant", "content": "<ANS>: "}
+                ],
+    "google/gemma-2-9b": [
+                    {"role": "user", "content":
+                            "\n\n<Q>:<ID>_<ID_SPECIFIC>\n<QT>: <TYPE>\n<C>:\n<FULL_QUESTION>\n1.- <O1>\n2.- <O2>\n3.- <O3>\n4.- <O4>\n5.- <O5>\n"},
+                    {"role": "assistant", "content": "<ANS>: "}
+                ],
+    "mistralai/Mistral-7B-v0.3": [
+                    {"role": "user", "content":
+                            "<Q>:<ID>_<ID_SPECIFIC>\n<QT>: <TYPE>\n<C>:\n<FULL_QUESTION>\n1.- <O1>\n2.- <O2>\n3.- <O3>\n4.- <O4>\n5.- <O5>\n"},
+                    {"role": "assistant", "content": "<ANS>: "}
+                ],
+    "HPAI-BSC/Llama3-Aloe-8B-Alpha": [
+                    {"role": "system", "content": ""},
+                    {"role": "user", "content":
+                            "<Q>:<ID>_<ID_SPECIFIC>\n<QT>: <TYPE>\n<C>:\n<FULL_QUESTION>\n1.- <O1>\n2.- <O2>\n3.- <O3>\n4.- <O4>\n5.- <O5>\n"},
+                    {"role": "assistant", "content": "<ANS>: "}
+                ]
+  },
+  "params": {
+    "temperature": 0,
+    "max_new_tokens": 2
+  },
+  "prompt_solo_en": PROMPT_SOLO_ENG,
+  "language": "VAR_LANG",
+  "document_partition": "VAR_STEP",
+  "tarea": "casimedicos"
+}
