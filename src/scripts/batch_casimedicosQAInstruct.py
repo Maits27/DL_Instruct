@@ -46,7 +46,7 @@ def create_messages():
             messages[-1]['content'] = messages[-1]['content'].replace(
                 '<ANS>', params["prompts"][prompt_lang]["ANS"])
 
-            if params['model'].split('/')[0] in sysModels:
+            if params['model'].split('/')[0] in sysModels and params['model'].split('/')[0] not in noInstModels:
                 messages[0]['content'] = params["prompts"][prompt_lang][params["prompt"]]
             else:
                 messages[-2]['content'] = f'{params["prompts"][prompt_lang][params["prompt"]]}{messages[-2]["content"]}'

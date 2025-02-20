@@ -27,8 +27,9 @@ OUTPUT_PATH="$SRC_PATH/outputQA/"
 
 #)
 declare -a pairs=(
-#    "BIGLlamaNoIt meta-llama/Llama-3.1-70B"
-    "ALOE HPAI-BSC/Llama3-Aloe-8B-Alpha"
+    "BIGLlamaNoIt meta-llama/Llama-3.1-70B"
+#    "ALOE HPAI-BSC/Llama3-Aloe-8B-Alpha"
+#    "MistralNoIt mistralai/Mistral-7B-v0.3"
 )
 #declare -a pairs=(
 #    "noInstLlama meta-llama/Llama-3.1-8B"

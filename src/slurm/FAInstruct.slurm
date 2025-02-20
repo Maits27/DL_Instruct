@@ -2,7 +2,7 @@
 #SBATCH --job-name='FA_instruct'
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=250GB
-#SBATCH --gres=gpu:4
+#SBATCH --gres=gpu:3
 #SBATCH --mail-user=murruela002@ikasle.ehu.eus
 #SBATCH --output=./out/out_logs_FA.log
 #SBATCH --error=./out/out_errors_FA.err

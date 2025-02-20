@@ -113,8 +113,10 @@ def inferencia():
             try:
                 if params['model'] in noInstModels:
                     prediction_list.append(int(output_messages.replace(' ', '').replace('\n', '')[-1]))
+                    output_messages = output_messages.split(f_id)[0]
                 else:
                     prediction_list.append(int(output_messages[-1]['content'].replace(' ', '').replace('\n', '')[-1]))
+                    output_messages[-1]['content'] = output_messages[-1]['content'].split(f_id)[0]
 
             except (ValueError, IndexError):
                 prediction_list.append(0)
