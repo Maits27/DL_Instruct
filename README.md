@@ -33,10 +33,10 @@ Four different models will be tested in each task:
 
 The parameters used for all the models in common are:
 
-| Temperature      | Max New Tokens | Prompt Language |
-|---------------|----------|-----------------|
-| 0     | 1        | English          |
-| 0     | 1        | Content language         |
+| Temperature   | Max New Tokens | Batch size | Prompt Language |
+|---------------|----------------|------------|-----------------|
+| 0             | 1              | 16         | English         |
+| 0             | 1              | 16         | Content language|
 
 All the specific parameters used for each model can be seen in the following folders:
 
