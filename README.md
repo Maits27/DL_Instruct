@@ -42,3 +42,9 @@ All the specific parameters used for each model can be seen in the following fol
 
 [Configuration folder](src/configuration) shows the different templates used for each task and in [slurm folder](src/slurm) the tested parameters for each model.
 
+The specific prompts for each task are avaliable in the configuration template of each task:
+
+* MCQA CasiMedicos: [plantilla.json](src/configuration/plantilla.json)
+* MCQA MedMCQA: [plantilla_MCQA.json](src/configuration/plantilla_MCQA.json)
+* AFRP: [plantilla_FA.json](src/configuration/plantilla_FA.json)
+
