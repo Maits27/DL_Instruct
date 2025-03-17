@@ -40,10 +40,5 @@ The parameters used for all the models in common are:
 
 All the specific parameters used for each model can be seen in the following folders:
 
-* **For instruct models**: [configuration folder](src/configuration) shows the different templates used for each task and in [slurm folder](src/slurm) the tested parameters for each model.
-* **For base models**: [configuration folder](train_src/configuration) shows the different templates used for each task and in [slurm folder](train_src/slurm) the tested parameters for each model.
+[Configuration folder](src/configuration) shows the different templates used for each task and in [slurm folder](src/slurm) the tested parameters for each model.
 
-
-## Base VS. Instruct
-
-All the code for evaluating Instruct models' performance is located in [src](src) folder while the code for base models is on [train_src](train_src).
